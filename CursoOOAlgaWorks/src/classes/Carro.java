@@ -10,4 +10,8 @@ public class Carro {
 	int anoDeFabricacao = 1500;
 	double valorDeMercado = 0;
 	Proprietario dono = new Proprietario();
+	
+	public void ligar(){
+		System.out.println("Ligando o carro " + modelo);
+	}
 }
