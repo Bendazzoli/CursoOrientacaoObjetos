@@ -3,6 +3,15 @@ package classes;
 public class Principal {
 	
 	public static void main(String[] args){
+		
+		Proprietario dono1 = new Proprietario();
+		dono1.nome = "João Do Código";
+		dono1.cpf = "111.222.333-44";
+		dono1.idade = 30;
+		dono1.logradouro = "Rua das Canelas, 10";
+		dono1.bairro = "Centro";
+		dono1.cidade = "Ciriema/SP";
+		
 		Carro meuCarro = new Carro();
 		meuCarro.fabricante = "CHEVROLET";
 		meuCarro.modelo = "ONIX LS";
@@ -10,23 +19,6 @@ public class Principal {
 		meuCarro.tipoCombustivel = "Flex";
 		meuCarro.anoDeFabricacao = 2016;
 		meuCarro.valorDeMercado = 35000.0;
-		
-		Carro seuCarro = new Carro();
-		seuCarro.fabricante = "CHEVROLET";
-		seuCarro.modelo = "SPIN LT";
-		seuCarro.cor = "Preto";
-		seuCarro.tipoCombustivel = "Flex";
-		seuCarro.anoDeFabricacao = 2017;
-		seuCarro.valorDeMercado = 75000.0;
-		
-		System.out.println("Meu Carro");
-		System.out.println("-------------------------");
-		System.out.println("Modelo: " + meuCarro.modelo);
-		System.out.println("Ano: " + meuCarro.anoDeFabricacao);
-		System.out.println();
-		System.out.println("Seu Carro");
-		System.out.println("-------------------------");
-		System.out.println("Modelo: " + seuCarro.modelo);
-		System.out.println("Ano: " + seuCarro.anoDeFabricacao);
+		meuCarro.dono = dono1;
 	}
 }

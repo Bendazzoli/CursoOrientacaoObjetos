@@ -3,10 +3,11 @@ package classes;
 public class Carro {
 	
 	//Atributos, Propriedades, Caracteristicas ou ainda Variáveis de Instância
-	String fabricante;
-	String modelo;
-	String cor;
-	String tipoCombustivel;
-	int    anoDeFabricacao;
-	double valorDeMercado;
+	String fabricante = "Sem Fabricante";
+	String modelo = "Sem modelo";
+	String cor = "Sem cor";
+	String tipoCombustivel = "";
+	int anoDeFabricacao = 1500;
+	double valorDeMercado = 0;
+	Proprietario dono = new Proprietario();
 }
