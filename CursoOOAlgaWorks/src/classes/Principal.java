@@ -37,5 +37,10 @@ public class Principal {
 		System.out.println("Peso ideal: " + imc.pesoIdeal);
 		System.out.println("Obeso: " + imc.obeso);
 		System.out.println("Grau de obesidade: " + imc.grauObesidade);
+		
+		
+		FolhaDePagamento folha = new FolhaDePagamento();
+		double salario = folha.calcularSalario(160, 12, 32.5, 40.2);
+		System.out.println("Salário total: " + salario);
 	}
 }
