@@ -54,5 +54,15 @@ public class Principal {
 		System.out.println("Preço de venda: " + preco.precoVenda);
 		
 		
+		Aeronave aviaoGol = new Aeronave();
+		aviaoGol.totalAssentos = 100;
+		Aeronave aviaoLatam = new Aeronave();
+		aviaoLatam.totalAssentos = 130;
+		aviaoGol.reservarAssentos(10);
+		aviaoLatam.reservarAssentos(5);
+		int assentosGol = aviaoGol.calcularAssentosDisponiveis();
+		int assentosLatam = aviaoLatam.calcularAssentosDisponiveis();
+		System.out.println("Assentos disponíveis - Gol: " + assentosGol);
+		System.out.println("Assentos disponíveis - LATAM: " + assentosLatam);
 	}
 }
