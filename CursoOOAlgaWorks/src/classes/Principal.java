@@ -42,5 +42,17 @@ public class Principal {
 		FolhaDePagamento folha = new FolhaDePagamento();
 		double salario = folha.calcularSalario(160, 12, 32.5, 40.2);
 		System.out.println("Salário total: " + salario);
+		
+		
+		Preco preco = new Preco();
+		preco.valorCustos = 140;
+		Produto produto = new Produto();
+		produto.definirPreco(preco, 20, 15);
+		System.out.println("Valor de custo: " + preco.valorCustos);
+		System.out.println("Valor de impostos: " + preco.valorImpostos);
+		System.out.println("Valor de lucro: " + preco.valorLucro);
+		System.out.println("Preço de venda: " + preco.precoVenda);
+		
+		
 	}
 }
