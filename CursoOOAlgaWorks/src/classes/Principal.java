@@ -64,5 +64,7 @@ public class Principal {
 		int assentosLatam = aviaoLatam.calcularAssentosDisponiveis();
 		System.out.println("Assentos disponíveis - Gol: " + assentosGol);
 		System.out.println("Assentos disponíveis - LATAM: " + assentosLatam);
+		
+		Cliente cliente = new Cliente("João das Couves","12312312312");
 	}
 }
