@@ -68,21 +68,10 @@ public class Principal {
 		@SuppressWarnings("unused")
 		Cliente cliente = new Cliente("João das Couves","12312312312");
 		
-		PagamentoBoleto pagtoBoleto = new PagamentoBoleto();
-		pagtoBoleto.setDescricao("Condomínio");
-		pagtoBoleto.setValor(450);
-		pagtoBoleto.setData("26/08/2013");
-		pagtoBoleto.setLinhaDigitavel("1234 1234 1234");
-		pagtoBoleto.setDataVencimento("27/08/2013");
-		pagtoBoleto.setCedente("Edifício da Praça Redonda");
-		pagtoBoleto.emitirComprovante();
 		
-		Transferencia transferencia = new Transferencia();
-		transferencia.setDescricao("Aluguel");
-		transferencia.setValor(1500);
-		transferencia.setData("10/08/2013");
-		transferencia.setContaOrigem("0001000123");
-		transferencia.setContaDestino("0001000965");
-		transferencia.emitirComprovante();
+		PagamentoBoleto pagtoBoleto = new PagamentoBoleto("Condomínio", 450, "26/08/2013", "1234 1234 1234", "27/08/2013", "Edifício da Praça Redonda");
+		Transferencia transferencia = new Transferencia("Aluguel", 1500, "10/08/2013", "0001000123", "0001000965");
+		EmissorDeComprovantes emissor = new EmissorDeComprovantes();
+		emissor.emitirComprovantes(transferencia, pagtoBoleto);
 	}
 }

@@ -6,9 +6,16 @@ public class PagamentoBoleto extends Transacao{
 	private String dataVencimento;
 	private String cedente;
 	
+	public PagamentoBoleto(String descricao, double valor, String data, String linhaDigitavel, String dataVencimento, String cedente) {
+		super(descricao, valor, data);
+		this.linhaDigitavel = linhaDigitavel;
+		this.dataVencimento = dataVencimento;
+		this.cedente = cedente;
+	}
+	
 	public void emitirComprovante(){
 		System.out.println("+====================================+");
-		System.out.println("|      Comprovante da transação      |");
+		System.out.println("       Comprovante da transação       ");
 		System.out.println("+====================================+");
 		System.out.println("* Descrição: " + this.getDescricao());
 		System.out.println("* Data: " + this.getData());

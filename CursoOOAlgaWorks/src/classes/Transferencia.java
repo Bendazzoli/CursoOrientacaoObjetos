@@ -7,7 +7,7 @@ public class Transferencia extends Transacao{
 	
 	public void emitirComprovante(){
 		System.out.println("+====================================+");
-		System.out.println("|      Comprovante da transação      |");
+		System.out.println("       Comprovante da transação       ");
 		System.out.println("+====================================+");
 		System.out.println("* Descrição: " + this.getDescricao());
 		System.out.println("* Data: " + this.getData());
@@ -16,6 +16,12 @@ public class Transferencia extends Transacao{
 		System.out.println("* Conta Destino: " + this.getContaDestino());
 		System.out.println("+====================================+");
 	}
+	
+	public Transferencia(String descricao, double valor, String data, String contaOrigem, String contaDestino) {
+			super(descricao, valor, data);
+			this.contaOrigem = contaOrigem;
+			this.contaDestino = contaDestino;
+		}
 
 	public String getContaOrigem() {
 		return contaOrigem;
