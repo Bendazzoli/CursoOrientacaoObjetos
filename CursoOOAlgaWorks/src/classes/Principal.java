@@ -63,7 +63,7 @@ public class Principal {
 		int assentosGol = aviaoGol.calcularAssentosDisponiveis();
 		int assentosLatam = aviaoLatam.calcularAssentosDisponiveis();
 		System.out.println("Assentos disponíveis - Gol: " + assentosGol);
-		System.out.println("Assentos disponíveis - LATAM: " + assentosLatam);
+		System.out.println("Assentos disponíveis - Azul: " + assentosLatam);
 		
 		@SuppressWarnings("unused")
 		Cliente cliente = new Cliente("João das Couves","12312312312");
