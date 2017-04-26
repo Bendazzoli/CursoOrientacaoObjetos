@@ -69,8 +69,8 @@ public class Principal {
 		Cliente cliente = new Cliente("João das Couves","12312312312");
 		
 		
-		PagamentoBoleto pagtoBoleto = new PagamentoBoleto("Condomínio", 450, "26/08/2013", "1234 1234 1234", "27/08/2013", "Edifício da Praça Redonda");
-		Transferencia transferencia = new Transferencia("Aluguel", 1500, "10/08/2013", "0001000123", "0001000965");
+		Transacao pagtoBoleto = new PagamentoBoleto("Condomínio", 450, "26/08/2013", "1234 1234 1234", "27/08/2013", "Edifício da Praça Redonda");
+		Transacao transferencia = new Transferencia("Aluguel", 1500, "10/08/2013", "0001000123", "0001000965");
 		EmissorDeComprovantes emissor = new EmissorDeComprovantes();
 		emissor.emitirComprovantes(transferencia, pagtoBoleto);
 	}

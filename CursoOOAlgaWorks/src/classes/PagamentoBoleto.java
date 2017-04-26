@@ -17,10 +17,11 @@ public class PagamentoBoleto extends Transacao{
 		System.out.println("+====================================+");
 		System.out.println("       Comprovante da transação       ");
 		System.out.println("+====================================+");
+		System.out.println("* Linha Digitável: " + this.getLinhaDigitavel());
+		System.out.println("+------------------------------------+");
 		System.out.println("* Descrição: " + this.getDescricao());
 		System.out.println("* Data: " + this.getData());
 		System.out.println("* Valor: " + this.getValor());
-		System.out.println("* Linha Digitável: " + this.getLinhaDigitavel());
 		System.out.println("* Data Vencimento: " + this.getDataVencimento());
 		System.out.println("* Cedente: " + this.getCedente());
 		System.out.println("+====================================+");

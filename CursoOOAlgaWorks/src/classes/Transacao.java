@@ -1,6 +1,6 @@
 package classes;
 
-public class Transacao {
+public abstract class Transacao {
 	private String descricao;
 	private double valor;
 	private String data;
@@ -11,13 +11,7 @@ public class Transacao {
 		this.data = data;
 	}
 	
-	public void emitirComprovante() {
-		System.out.println("Comprovante da transação");
-		System.out.println("========================");
-		System.out.println("Descrição: " + this.getDescricao());
-		System.out.println("Data: " + this.getData());
-		System.out.println("Valor: " + this.getValor());
-		}
+	public abstract void emitirComprovante();
 
 	public String getDescricao() {
 		return descricao;

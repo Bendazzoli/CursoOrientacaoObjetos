@@ -9,11 +9,12 @@ public class Transferencia extends Transacao{
 		System.out.println("+====================================+");
 		System.out.println("       Comprovante da transação       ");
 		System.out.println("+====================================+");
-		System.out.println("* Descrição: " + this.getDescricao());
-		System.out.println("* Data: " + this.getData());
-		System.out.println("* Valor: " + this.getValor());
 		System.out.println("* Conta Origem: " + this.getContaOrigem());
 		System.out.println("* Conta Destino: " + this.getContaDestino());
+		System.out.println("+------------------------------------+");
+		System.out.println("* Descrição: " + this.getDescricao());
+		System.out.println("* Valor: " + this.getValor());
+		System.out.println("* Data da operação: " + this.getData());
 		System.out.println("+====================================+");
 	}
 	
