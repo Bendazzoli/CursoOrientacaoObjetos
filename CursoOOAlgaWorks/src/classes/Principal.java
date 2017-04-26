@@ -1,5 +1,9 @@
 package classes;
 
+import interfaces.Impressora;
+import interfaces.Operadora;
+
+
 public class Principal {
 	
 	public static void main(String[] args){
@@ -73,5 +77,36 @@ public class Principal {
 		Transacao transferencia = new Transferencia("Aluguel", 1500, "10/08/2013", "0001000123", "0001000965");
 		EmissorDeComprovantes emissor = new EmissorDeComprovantes();
 		emissor.emitirComprovantes(transferencia, pagtoBoleto);
+		
+		System.out.println("");
+		System.out.println("");
+		//Cartão
+		Operadora operadora = new Cielo();
+		Impressora impressora = new ImpressoraEpson();
+		Cartao cartao = new Cartao();
+		cartao.setNomeTitular("João M Couves");
+		cartao.setNumeroCartao("123");
+		
+		Compra compra = new Compra();
+		compra.setNomeCliente("João Mendonça Couves");
+		compra.setProduto("Sabonete");
+		compra.setValorTotal(2.5);
+		
+		Checkout checkout = new Checkout(operadora, impressora);
+		checkout.fecharCompra(compra, cartao);
+		
+		System.out.println("");
+		System.out.println("");
+		Operadora operadora2 = new Redecard();
+		Impressora impressora2 = new ImpressoraXingLing();
+		Cartao cartao2 = new Cartao();
+		cartao2.setNomeTitular("João M Couves");
+		cartao2.setNumeroCartao("456");
+		Compra compra2 = new Compra();
+		compra2.setNomeCliente("João Mendonça Couves");
+		compra2.setProduto("Sabonete");
+		compra2.setValorTotal(100);
+		Checkout checkout2 = new Checkout(operadora2, impressora2);
+		checkout2.fecharCompra(compra2, cartao2);
 	}
 }
